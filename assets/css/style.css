@@ -1,3 +1,6 @@
-body, html{
-    background-image: url("../assets/images/sports.jpg");
+body{
+    background-image: url("../images/mobil.jpg");
+}
+.text-muted {
+    color: red;
 }
