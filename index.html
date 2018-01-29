@@ -10,7 +10,7 @@
         crossorigin="anonymous">
     <link rel="stylesheet" type="text/css" href="assets/css/style.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-
+    <script src="assets/javascript/script.js" type="text/javascript"></script>
     <title>GifTastic</title>
 </head>
 
@@ -29,6 +29,17 @@
         <div id="gifDisplay">
         </div>
     </div>
+    <!-- submission form -->
+    <div class="col-lg-3">
+        <form id="sportForm">
+            <div class="form-group">
+            <label for="sport-input">Add a Sport Yourself</label>
+            <input type="text" id="sport-input">
+            </div>
+            <button type="submit" class="btn btn-primary" id="add">ADD</button>
+            <button type="submit" class="btn btn-primary" id="remove">REMOVE</button>
+        </form>
+    </div>
     <!-- footer -->
     <div class="footer navbar-fixed-bottom">
         <div class="col-md-5"></div>
@@ -36,7 +47,7 @@
             <span class="text-muted">Designed by Trevor in Charlotte</span>
         </div>
     </div>
-<script src="assets/javascript/script.js" type="text/javascript"></script>
+    
 </body>
 
 </html>
