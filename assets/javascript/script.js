@@ -17,7 +17,8 @@ $(document).ready(function () {
     }
     // create listener for adding a sport, call createButton
 
-    $("#add").on("click", function () {
+    $("#add").on("click", function (event) {
+        event.preventDefault();
         var userInput = $("#sport-input").val().trim();
         if ($("#sport-input").val() == "") {
             alert("Input can not be left blank");
@@ -26,6 +27,7 @@ $(document).ready(function () {
         // console.log(sports);
         $("#buttonArea").empty();
         createButton();
+        $("#sport-input").val("");
     });
 
     // "Display Sports Gifs by querying API, create jquery object to display returned responses

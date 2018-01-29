@@ -1,6 +1,10 @@
 body{
-    background-image: url("../images/mobil.jpg");
+    background-image: url("../images/turf.jpg");
+    background-size: cover;
 }
 .text-muted {
-    color: red;
+    color: #000000;
+}
+.sport {
+margin-left: 5px;
 }
