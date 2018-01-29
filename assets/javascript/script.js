@@ -1,6 +1,6 @@
 $(document).ready(function () {
     // array of sports i like
-    var sports = ["skateboarding", "football", "weightlifting", "mountain climbing"];
+    var sports = ["skateboarding", "football", "weightlifting", "mountain climbing", "boxing"];
 
     // display buttons, add classes, write name on button
     function createButton() {
@@ -22,6 +22,7 @@ $(document).ready(function () {
                 alert("Input can not be left blank");
             };
             sports.push(sport);
+            console.log(sports);
             createButton();
         });
     };
@@ -38,10 +39,10 @@ $(document).ready(function () {
             var remoteData = response.data;
             for (var i = 0; i < remoteData.length; i++){
                 var displayElement = $("<div>");
-                displayElemnt.addClass("displayElement");
-                var sportsRating = $("<p>").text("Rating" + remoteData[i].rating);
+                displayElement.addClass("displayElement");
+                var sportsRating = $("<p>").text("Rating " + remoteData[i].rating);
                 displayElement.append(sportsRating);
-                var sportsImage = $("<img");
+                var sportsImage = $("<img>");
                 sportsImage.attr("src", remoteData[i].images.fixed_height_small_still.url);
                 sportsImage.attr("data-still", remoteData[i].images.fixed_height_small_still.url);
                 sportsImage.attr("data-animate", remoteData[i].images.fixed_height_small.url);
@@ -53,8 +54,9 @@ $(document).ready(function () {
         });
     };
 
-// toggle between still/animated state
+// When clicking on any button, call displaySports function
 $(document).on("click", ".sport", displaySports);
+// When clicking on a returned image, toggle its state
 $(document).on("click", ".image", function(){
     var state = $(this).attr("data-state");
     if (state == "still"){
