@@ -5,7 +5,7 @@ $(document).ready(function () {
 
     // display buttons, add classes, write name on button
     function createButton() {
-        $("#buttonArea").empty();
+        // $("#buttonArea").empty();
         for (var i = 0; i < sports.length; i++) {
             var sportButton = $("<button>");
             sportButton.addClass("sport");
@@ -24,6 +24,7 @@ $(document).ready(function () {
         };
         sports.push(userInput);
         // console.log(sports);
+        $("#buttonArea").empty();
         createButton();
     });
 
